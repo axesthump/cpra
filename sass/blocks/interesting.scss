@@ -1,0 +1,207 @@
+.active {
+    display: block !important;
+}
+
+.interesting {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+
+    &__list {
+        list-style: none;
+
+        position: relative;
+        z-index: 2;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item,
+
+    &__item {
+        display: none;
+
+        position: relative;
+
+        cursor: pointer;
+
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 40px;
+        padding-bottom: 104px;
+
+        background: url(./../img/slider1.png) no-repeat center;
+        background-size: cover;
+
+        &::before {
+            content: 'Интересное';
+
+            position: absolute;
+            top: -10px;
+            left: 24px;
+
+            background-color: #E06769;
+
+            color: #fff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+
+            padding: 5px 8px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    &__list-pagination {
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        z-index: 4;
+
+        li {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        button {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn {
+        border: none;
+        background: none;
+
+        width: 24px;
+        height: 24px;
+
+        background: url('./../img/arrow_forward.svg') no-repeat center;
+
+        &--back {
+            margin-right: 42px;
+        }
+
+        &--forward {
+            transform: scale(-1, 1);
+            margin-left: 56px;
+        }
+    }
+
+    &__item-pagination {
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        opacity: 0.5;
+        margin-left: 16px;
+        padding-bottom: 4px;
+
+        font-style: normal;
+        font-weight: normal;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .interesting {
+        &__item {
+            background: url(./../img/slider-tablet.png) no-repeat center;
+            background-size: cover;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 129px;
+            padding-bottom: 129px;
+
+            min-height: 165px;
+
+            &::before {
+                top: -10px;
+                left: 48px;
+            }
+        }
+
+        &__list-pagination {
+            bottom: 5%;
+            left: 4%;
+        }
+
+        &__btn {
+            &--back {
+                margin-right: 8px;
+                opacity: 0.7;
+            }
+
+            &--forward {
+                margin-left: 24px;
+                opacity: 0.7;
+            }
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 48px;
+
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .interesting {
+        &__text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 48px;
+            /* or 133% */
+        }
+
+        &__item {
+            background: url(./../img/interesting-desktop.png) no-repeat center;
+            height: auto;
+            background-size: cover;
+
+            padding-left: 150px;
+            padding-right: 685px;
+
+
+            &::before {
+                top: -10px;
+                left: 150px;
+            }
+        }
+
+        &__list-pagination {
+            padding-left: 90px;
+        }
+    }
+}

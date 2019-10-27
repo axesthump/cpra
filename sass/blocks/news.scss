@@ -1,0 +1,321 @@
+.news {
+    position: relative;
+    z-index: 2;
+
+    &__wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 44px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 24px;
+        color: #193441;
+        font-style: normal;
+        font-weight: normal;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    &__all {
+        color: #267D92;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+
+        cursor: pointer;
+
+        &:hover {
+            color: #E06769;
+        }
+    }
+
+    &__btn {
+        border: none;
+        background: url(./../img/arrow2.svg) no-repeat 0 0;
+        width: 22px;
+        height: 19px;
+
+        cursor: pointer;
+
+        &--back {
+            transform: scale(-1, 1);
+
+            &:hover {
+                background: url('./../img/arrow_red.svg') no-repeat center;
+                transform: scale(-1, 1);
+                height: 14px;
+            }
+
+        }
+
+        &--forward {
+            margin-left: 16px;
+
+            &:hover {
+                background: url('./../img/arrow_red.svg') no-repeat center;
+                height: 14px;
+            }
+        }
+
+    }
+
+    &__img {
+        background: url('./../img/news-image.png') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        min-height: 190px;
+
+        margin-top: 44px;
+
+        position: relative;
+
+        &::before {
+            content: '3 Июля';
+
+            position: absolute;
+            top: -8px;
+            left: 24px;
+
+            background-color: #E06769;
+
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 24px;
+
+            color: #FFFFFF;
+            padding: 5px 8px;
+        }
+
+        &--4 {
+            background: url('./../img/news4.png') no-repeat center;
+            background-size: cover;
+
+            &::before {
+                content: '26 Июня';
+            }
+        }
+
+        &--1 {
+            background: url('./../img/news1-desktop.png') no-repeat center;
+            background-size: cover;
+        }
+
+        &--2 {
+            background: url('./../img/news2-desktop.png') no-repeat center;
+            background-size: cover;
+        }
+
+        &--3 {
+            background: url('./../img/news3-desktop.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__text {
+        padding-left: 24px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #193441;
+    }
+
+    &__class {
+        padding-left: 24px;
+
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #799A8E;
+    }
+
+    &__a {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 65px;
+
+        width: calc(100% - 20px);
+        min-height: 48px;
+
+        background: url('./../img/ad-banner.png') no-repeat center;
+        background-size: cover;
+    }
+
+    &__item {
+        cursor: pointer;
+
+        &:hover p {
+            color: #E06769;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .news {
+        &__wrapper {
+            margin-top: 68px;
+            justify-content: flex-start;
+
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+
+        &__all {
+            margin-left: 24px;
+        }
+
+        &__btns {
+            margin-left: auto;
+        }
+
+        &__list {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        &__item {
+            width: 30%;
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &--tablet {
+                display: block;
+            }
+        }
+
+        &__a {
+            background: url('./../img/imad-tablet.png') no-repeat center;
+            min-height: 112px;
+            margin-top: 105px;
+            background-size: cover;
+        }
+
+        &__img {
+            &--2 {
+                background: url('./../img/news-2.png') no-repeat center;
+                background-size: cover;
+
+                &::before {
+                    content: '29 Июня';
+                }
+            }
+
+            &--3 {
+                background: url('./../img/news-3.png') no-repeat center;
+                background-size: cover;
+
+                &::before {
+                    content: '27 Июня';
+                }
+            }
+        }
+
+        &__text {
+            padding: 0;
+        }
+
+        &__class {
+            padding: 0;
+        }
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .news {
+        &__wrapper {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        &__item {
+            width: 20%;
+        }
+
+        &__img {
+            &--4 {
+                background: url('./../img/news4.png') no-repeat center;
+
+                &::before {
+                    content: '26 Июня';
+                }
+            }
+
+            &--1 {
+                background: url('./../img/news1-desktop.png') no-repeat center;
+                background-size: cover;
+            }
+
+            &--2 {
+                background: url('./../img/news2-desktop.png') no-repeat center;
+                background-size: cover;
+            }
+
+            &--3 {
+                background: url('./../img/news3-desktop.png') no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        &__list {
+            padding-left: 115px;
+            padding-right: 115px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__text {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+
+        &__class {
+            padding-left: 23px;
+            padding-right: 23px;
+        }
+
+        &__btns {
+            display: none;
+        }
+
+        &__a {
+            background: url('./../img/imad-desktop.png') no-repeat center;
+            background-size: cover;
+
+            padding: 0;
+
+            width: calc(100% - 230px);
+            min-height: 189px;
+
+            margin-left: 115px;
+            margin-right: 115px;
+        }
+    }
+}

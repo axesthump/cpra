@@ -1,0 +1,110 @@
+.subscribe {
+    position: relative;
+    z-index: 2;
+    background: url('./../img/subscribe-banner_image.png') no-repeat center;
+    background-size: cover;
+
+    &__form {
+        width: 100%;
+        text-align: center;
+        padding-top: 47px;
+        padding-bottom: 46px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+
+        color: #FFFFFF;
+    }
+
+    &__wrapper {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+    }
+
+    &__input {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+
+        color: #193441;
+
+        &::placeholder {
+            color: #193441;
+        }
+    }
+
+    &__btn {
+        border: none;
+        width: 48px;
+        height: 48px;
+
+        background: url('./../img/arrow_forward.svg') no-repeat center, #267D92;
+        transform: scale(-1, 1);
+
+        cursor: pointer;
+
+        &:hover {
+            background: url('./../img/arrow_forward.svg') no-repeat center, #E06769;
+            transform: scale(-1, 1);
+        }
+
+
+    }
+}
+
+@media (min-width: 768px) {
+    .subscribe {
+        background: url('./../img/banner-tablet.png') no-repeat center;
+        background-size: cover;
+        margin-left: 24px;
+        margin-right: 24px;
+
+        &__form {
+            text-align: left;
+            margin-left: 48px;
+
+            width: calc(100% - 48px);
+        }
+
+        &__wrapper {
+            padding-left: 0;
+        }
+
+        &__btn {
+            width: 51px;
+            height: 51px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .subscribe {
+        margin-left: 120px;
+        margin-right: 120px;
+
+        &__form {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 48px;
+            padding-top: 15px;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.partners {
+    background-color: #F2F2F2;
+    padding-top: 28px;
+    margin-top: 68px;
+    padding-bottom: 60px;
+
+    &__wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 24px;
+        color: #193441;
+        font-weight: normal;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    &__all {
+        color: #267D92;
+        font-size: 16px;
+        line-height: 16px;
+
+        position: relative;
+        z-index: 3;
+
+        &:hover {
+            color: #E06769;
+        }
+    }
+
+    &__btns {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__btn {
+        border: none;
+        background: url(./../img/arrow2.svg) no-repeat 0 0;
+        width: 22px;
+        height: 19px;
+
+        cursor: pointer;
+
+        &--back {
+            transform: scale(-1, 1);
+
+            &:hover {
+                background: url('./../img/arrow_red.svg') no-repeat center;
+                transform: scale(-1, 1);
+                height: 14px;
+            }
+        }
+
+        &--forward {
+            margin-left: 16px;
+
+            &:hover {
+                background: url('./../img/arrow_red.svg') no-repeat center;
+                height: 14px;
+            }
+        }
+
+    }
+
+    &__hide {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        margin-top: 36px;
+
+    }
+
+    &__item--roskrov {
+        background: url('./../img/roskrov.svg') no-repeat center;
+        background-size: contain;
+    }
+
+    &__item {
+        height: 56px;
+        background-size: cover;
+
+        &--fom {
+            background: url('./../img/fom.svg') no-repeat center;
+        }
+
+        &--ozon {
+            background: url('./../img/ozon.png') no-repeat center;
+            background-size: contain;
+            border-image-width: 100%;
+        }
+
+        &--marsh {
+            background: url('./../img/marsh.svg') no-repeat center;
+        }
+
+        &--nova {
+            background: url('./../img/nova.png') no-repeat center;
+        }
+
+        &--hunter {
+            background: url('./../img/hunter.png') no-repeat center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .partners {
+        &__wrapper {
+            margin-top: 68px;
+            justify-content: flex-start;
+
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+
+        &__all {
+            margin-left: 24px;
+        }
+
+        &__btns {
+            margin-left: auto;
+        }
+
+        &__list {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        &__item {
+            width: 25%;
+        }
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .partners {
+
+        &__wrapper {
+            padding-left: 150px;
+            padding-right: 150px;
+
+        }
+
+        &__list {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+
+    }
+}
